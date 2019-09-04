@@ -8,14 +8,14 @@ on the work your team sees.
 
 | #     | Description                                       | Difficulty
 |-------|:-------------------------------------------------:|----------------------
-| 1     | Write the implementations for CardMoveChecks deckLevelCheck method| Easy
-| 2     | Write the implementations for CardMoveChecks opposingColor method| Easy
-| 3     | Write the implementations for CardMoveChecks cardMoveCheck method| Easy
+| 1     | Write the implementations for CardMoveChecks deckLevelCheck method| Easy DONE
+| 2     | Write the implementations for CardMoveChecks opposingColor method| Easy DONE
+| 3     | Write the implementations for CardMoveChecks cardMoveCheck method| Easy DONE
 | 4     | Write the implementation for the GameStateController init method| Difficult
-| 5     | Write the implementations for CardMoveChecks checkPlayerInput method| Moderate
+| 5     | Write the implementations for CardMoveChecks checkPlayerInput method| Moderate DONE
 | 6     | Write the implementations for GameStateParser PadAndAdd method| Moderate
-| 7     | Write the implementations for GameStateParser cardStringOrNull method| Easy
-| 8     | Write the implementations for GameStateParser PadAndAdd method| Moderate
+| 7     | Write the implementations for GameStateParser cardStringOrNull method| Easy DONE 
+| 8     | Write the implementations for GameStateParser PadAndAdd method| Moderate DONE
 | 9     | Write the implementations for GameStateParser printRow method| Moderate
 | 10    | Write the implementations for GameStateParser parseGameState method| DIfficult
 | 11    | Write the implementation for the GameStateController winDetection method| Moderate
