@@ -13,7 +13,7 @@ on the work your team sees.
 | 3     | Write the implementations for CardMoveChecks cardMoveCheck method| Easy DONE
 | 4     | Write the implementation for the GameStateController init method| Difficult
 | 5     | Write the implementations for CardMoveChecks checkPlayerInput method| Moderate DONE
-| 6     | Write the implementations for GameStateParser PadAndAdd method| Moderate
+| 6     | Write the implementations for GameStateParser PadAndAdd method| Moderate DONE
 | 7     | Write the implementations for GameStateParser cardStringOrNull method| Easy DONE 
 | 8     | Write the implementations for GameStateParser PadAndAdd method| Moderate DONE
 | 9     | Write the implementations for GameStateParser printRow method| Moderate
