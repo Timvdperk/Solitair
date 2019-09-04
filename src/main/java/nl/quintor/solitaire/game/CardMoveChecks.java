@@ -45,7 +45,31 @@ public class CardMoveChecks {
      * @throws MoveException on illegal move
      */
     public static void deckLevelChecks(Deck sourceDeck, int sourceCardIndex, Deck destinationDeck) throws MoveException {
-        // TODO: Write implementation
+        if (sourceDeck == destinationDeck) {
+            throw new MoveException("Move source and destination can't be the same");
+        }
+        else if (destinationDeck.getDeckType() == DeckType.WASTE || destinationDeck.getDeckType() == DeckType.STOCK) {
+            throw new MoveException("You can\'t move cards to the stock");
+        }
+        else if (sourceDeck.size() == 0) {
+            throw new MoveException("You can\'t move a card from an empty deck");
+        }
+        else if (sourceDeck.getInvisibleCards() > 0) {
+            int amountCards = sourceDeck.size() - sourceDeck.getInvisibleCards();
+            if (sourceCardIndex <= sourceDeck.size() && sourceCardIndex >= sourceDeck.size() -  amountCards){
+                ;
+            }
+            else {
+                throw new MoveException("You can\'t move an invisible card");
+            }
+
+        }
+        else if (destinationDeck.getDeckType() == DeckType.STACK) {
+             if (sourceCardIndex != sourceDeck.size()) {
+                 throw new MoveException("You can\'t move more than 1 card at a time to a Stack Pile");
+             }
+             else ;
+        }
     }
 
     /**
