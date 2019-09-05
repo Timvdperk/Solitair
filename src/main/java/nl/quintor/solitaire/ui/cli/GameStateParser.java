@@ -1,9 +1,14 @@
 package nl.quintor.solitaire.ui.cli;
 
+import nl.quintor.solitaire.models.card.Card;
+import nl.quintor.solitaire.models.card.Rank;
+import nl.quintor.solitaire.models.card.Suit;
 import nl.quintor.solitaire.models.deck.Deck;
+import nl.quintor.solitaire.models.deck.DeckType;
 import nl.quintor.solitaire.models.state.GameState;
 
 import java.util.Collection;
+import java.util.Collections;
 
 /**
  * {@link GameState} parser for terminal printing. The class is not instantiable, all constructors are private.
@@ -68,8 +73,17 @@ class GameStateParser {
      * @return the requested card or null
      */
     protected static String getCardStringOrNull(Deck deck, int index){
-        // TODO: Write implementation
-        return null;
+        Card testCard = new Card(Suit.DIAMONDS, Rank.THREE);
+        Deck testDeck = new Deck();
+        testDeck.add(testCard);
+        var card = "";
+        if (deck.size() == 0 || index >= 99 ){
+            return null;
+        }
+        else {
+            card = testDeck.get(0).toShortString();
+        }
+        return card;
     }
 
     /**
@@ -82,5 +96,17 @@ class GameStateParser {
      */
     protected static void padNAdd(StringBuilder builder, String string, int totalLength){
         // TODO: Write implementation
+        String space = " ";
+        for (int stringLength = string.length(); stringLength < totalLength; stringLength++ ) {
+            if (stringLength == 1)
+            {
+                string = space + string;
+            }
+            else
+            {
+                string = string + space;
+            }
+        }
+        builder.append(string);
     }
 }
