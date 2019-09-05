@@ -76,14 +76,14 @@ class GameStateParser {
         Card testCard = new Card(Suit.DIAMONDS, Rank.THREE);
         Deck testDeck = new Deck();
         testDeck.add(testCard);
-        var card = "";
+        var cardString = "";
         if (deck.size() == 0 || index >= 99 ){
             return null;
         }
         else {
-            card = testDeck.get(0).toShortString();
+            cardString = testDeck.get(0).getSuit().getSymbol() + " " +testDeck.get(0).getRank().getSymbol();
         }
-        return card;
+        return cardString;
     }
 
     /**
