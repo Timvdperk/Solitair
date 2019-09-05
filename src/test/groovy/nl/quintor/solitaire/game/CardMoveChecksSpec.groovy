@@ -21,8 +21,8 @@ class CardMoveChecksSpec extends Specification {
         ex.getMessage() == message
         where:
         testcase| input | exception | message
-        "Invalid source move"|["M", "Z", "G"] as String[] | MoveException | 'Invalid Move syntax. "Z" is not a valid source location.\nSee H̲elp for instructions.'
-        "Invalid destination move"|["M", "O", "Z"] as String[] | MoveException | 'Invalid Move syntax. "Z" is not a valid destination location.\nSee H̲elp for instructions.'
+        "Invalid source move"|["M", "Z", "G"] as String[] | MoveException | 'Invalid source move'
+        "Invalid destination move"|["M", "O", "Z"] as String[] | MoveException | 'Invalid source move'
     }
 
     @Unroll

@@ -29,8 +29,22 @@ public class CardMoveChecks {
      * @param input the user input, split on the space character, cast to uppercase
      * @throws MoveException on syntax error
      */
-    public static void checkPlayerInput(String[] input) throws MoveException{
-        // TODO: Write implementation
+    public static void checkPlayerInput(String[] input) throws MoveException {
+        String firstinp = input[0];
+        String secinp = input[1];
+        String thirdinp = input[2];
+        if (firstinp.equals("M")) {
+            if (secinp.matches("[A-G][0-9]{1,2}") || (secinp.matches("[O]")) && (thirdinp.matches("[A-G]") || thirdinp.matches("[S][A-G]"))){ {
+                System.out.print("Valid input");
+                }
+            }
+            else {
+                throw new MoveException("Invalid source move");
+            }
+        }
+        else {
+            throw new MoveException("You didnt press m");
+        }
     }
 
     /**
@@ -57,7 +71,7 @@ public class CardMoveChecks {
         else if (sourceDeck.getInvisibleCards() > 0) {
             int amountCards = sourceDeck.size() - sourceDeck.getInvisibleCards();
             if (sourceCardIndex <= sourceDeck.size() && sourceCardIndex >= sourceDeck.size() -  amountCards){
-                ;
+
             }
             else {
                 throw new MoveException("You can\'t move an invisible card");
